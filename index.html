@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta  http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="webpage/bootstrap.min.css"/>
+    <script language="javascript" src="webpage/jquery.min.js"></script>
+	<script language="javascript" src="webpage/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="webpage/cssReset.css"/>
+	<title>Homepage of Goujia Hou</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156016426-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-156016426-1');
+</script>
+
+</head>
+<body>
+<style type='text/css'>
+	body{
+		font-family:arial,"Microsoft YaHei",微软雅黑,宋体,Helvetica;
+		font-size:15px;
+	}
+	/*
+		div.content:
+			provide the content div in the middle
+	*/
+	body div.content{
+		/*width:1280px;*/
+		width:1000px;
+		margin:0 auto;
+		line-height:30px;
+	}
+	/*
+		header wrapper
+	*/
+	body div.header{
+		background-color:#2196F3;
+	}
+	body div.header > div.content{
+		padding:10px;
+	}
+	/*
+		footer1
+	*/
+	body div.footer1{
+		margin-top:30px;
+		background-color:#64B5F6;
+	}
+	/*
+		footer2
+	*/
+	body div.footer2{
+		background-color:#2196F3;
+	}
+	body div.footer > div.content{
+		padding:10px;
+	}
+	body div.footer1 > div.content{
+		padding:20px;
+		line-height:40px;
+		font-size:1.2em;
+	}
+	/*
+		utils css
+	*/
+	div.white-text{
+		color:white;
+	}
+	div.content > div.title{
+		padding:20px 0;
+		border-top:1px silver solid;
+		margin-top:30px;
+		font-size:2em;
+		font-weight:bold;
+	}
+	body a{
+		text-decoration:none;
+	}
+	div.content ul{
+		list-style: disc inside none;
+	}
+	div.content ol{
+		list-style: none inside none;
+	}
+	div.content li{
+		line-height:30px;
+		padding-bottom:5px;
+	}
+	div.content div.float-right{
+		float:right;
+	}
+</style>
+<!-- css for bio -->
+<style type="text/css">
+	/*
+		bio
+	*/
+	div.bio{
+		font-size:1.2em;
+	}
+	div.bio > div.left{
+		float:left;
+		width:300px;
+	}
+	div.bio > div.left > img.me{
+		max-height:220px;
+		margin:10px;
+		max-width:220px;
+		margin-top:20px;
+		margin-left:40px;
+	}
+
+	div.bio > div.right{
+		margin:0 0 0 310px;
+		min-height:300px;
+	}
+	div.bio > div.right > div.line.name{
+		padding:15px 0;
+		line-height:40px;
+	}
+	div.bio > div.right > div.name > span.name,div.bio > div.right > div.name > span.chineseName{
+		font-size:2em;
+		font-weight:bold;
+	}
+	div.bio > div.right > div.name > span.chinesesName{
+		font-family:"Microsoft YaHei",微软雅黑,宋体,Helvetica,arial;
+	}
+	div.bio > div.right > div.name > span.misc{
+		font-size:1.5em;
+		font-weight:bold;
+	}
+	div.bio > div.right > div.line.school{
+		padding:5px 0;
+	}
+
+	div.bio > div.right > div.line.office{
+		padding:5px 0;
+	}
+
+</style>
+<!-- quick link and intro -->
+<style type="text/css">
+div.quickLink{
+	min-height:70px;
+}
+div.quickLink > .block{
+	display:block;
+	float:left;
+	padding:10px 0px;
+	text-align:center;
+	border:1px silver solid;
+	border-radius:5px;
+	box-shadow:2px 2px 1px silver;
+	width:140px;
+	margin-right:50px;
+	margin-top:20px;
+	cursor:pointer;
+}
+</style>
+<!-- research and education -->
+<style type="text/css">
+div.research > ul > li > span.title,div.research > ul > li > div.time,
+div.education > ul > li > span.title,div.education > ul > li > div.time,
+div.pro > ul > li > span.title{
+	font-weight:bold;
+	font-size:1.1em;
+}
+div.research > ul > li > div.info,
+div.education > ul > li > div.info,
+div.pro > ul > li > div.info{
+	padding-left:20px;
+	word-wrap:break-word;
+}
+</style>
+<!-- publications -->
+<style type="text/css">
+div.publications > ol > li{
+	padding-bottom: 30px;
+}
+div.publications > ol > li > span.title{
+	font-weight:bold;
+	font-size:1.2em;
+}
+div.publications > ol > li > div.info{
+	padding-left:20px;
+	word-wrap:break-word;
+}
+div.publications > ol > li > div.info.italic{
+	font-style: italic;
+}
+div.publications div.imgblock{
+	float:left;
+	height:180px;
+	width:300px;
+	padding:10px;
+	margin-right:30px;
+	text-align: center;
+}
+div.publications div.imgblock > img{
+	max-width:100%;
+	max-height:100%;
+}
+img.press{
+	height:20px;
+}
+</style>
+<div class="header">
+	<div class="content white-text">
+		Welcome to Guojia Hou (侯国家)'s Homepage
+	</div>
+</div>
+
+
+<div class="content bio">
+	<!-- bio -->
+	<div class="left">
+		<img class='me' src="resources/me.png"></img>
+		<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://scholar.google.com/citations?hl=zh-CN&user=FWLFA44AAAAJ" target="_blank">
+			<img class='scholar' style="height:30px;" src="resources/googlescholar.png"></img>
+		</a>
+		<a href="https://github.com/Hou-Guojia" target="_blank">
+			<img class='github' style="height:30px" src="resources/github.png"></img>
+		</a>
+		<a href="https://dblp.uni-trier.de/pid/129/7119.html" target="_blank">
+			<img class='dblp' style="height:20px" src="resources/dblp.png"></img>
+		</a>
+
+	</div>
+	<div class="right">
+		<div class="line name">
+			<span class="name">Guojia Hou</span>
+			<span class="chineseName">侯国家</span>
+		</div>
+		<div class="line school">
+			College of Computer Science and Technology
+		</div>
+		<div class="line school">
+			Qingdao University
+		</div>
+		<br/>
+		<div class="line office">
+			Email: hgjouc@126.com
+		</div>
+	</div>
+</div>
+
+<div class="content quickLink">
+	<a class="block" href="#Projects">Projects</a>
+	<a class="block" href="#Selected">Selected Papers</a>
+	<a class="block" href="#Papers">Publications</a>
+	<a class="block" href="#Award">Awards</a>
+	<a class="block" href="#Patent">Patents</a>
+</div>
+
+<div class="content intro">
+	<div class='title'>Introduction</div>
+	Currently, I am an associate professor at the College of Computer Science and Technology, Qingdao University.
+	I received my BS degree in computer science in 2010 and my MS and PhD degrees in computer applications technology from the Ocean University of China in 2012 and 2015, respectively.
+	My current research interests involve variational methods, partial differential equations, and numerical optimization, and with applications to image/video processing and image/video quality assessment. <br/>
+</div>
+<div class="content education">
+	<a name="education"></a>
+	<div class="title">Educations</div>
+	<span class="title" style="font-size: 17px; font-weight: bold;">Ocean University of China</span><br>
+	<span class="title" style="font-size: 17px; font-weight: bold;">PhD in Computer Application Technology (MD-PhD)</span><br>
+	<ul>
+		<li>Development of acoustic glider system, funded by national high technology research and development program (863 program), project number: 2012AA091004</li>
+		<li>Key technology of inspection and detection system for acoustic doppler profiler, funded by scientific research of ocean public welfare Scientific Institution, project number: 201205038</li>
+	</ul>
+</div>
+<div class="content honors" name='honors'>
+	<a name="honors"></a>
+	<div class="title">Skills</div>
+	<ul>
+		<li>Excellent ability of mathematical modelling and real-world problems troubleshooting</li>
+		<li>Excellent with MATLAB (hybridized with C/C++), Java, LATEX</li>
+		<li>Clear, logical and accurate writing skills</li>
+	</ul>
+</div>
+
+<div class="content news">
+	<a name="Projects"></a>
+	<div class="title">Projects</div>
+	<ul>
+        <li><strong>(Lead Investigator)</strong><u>Underwater image blind restoration via nonlocal variational model and underwater image quality assessment</u>, funded by National Natural Science Foundation of China, project number: 61901240.
+		<li><strong>(Lead Investigator)</strong><u>Research on non-local variational methods and image quality evaluation for blind restoration of underwater images</u>, funded by Natural Science Foundation of Shandong Province, project number: ZR2019BF042.
+		<li><strong>(Lead Investigator)</strong><u>Research on Variational Methods for Underwater Image Restoration Based on Image Formation Model and Their Fast Algorithms</u>, funded by funded by China Postdoctoral Science Foundation, project number: 2017M612204.
+		<li><strong>(Lead Investigator)</strong><u>Research on Variational Methods for Underwater Image Enhancement and Restoration integrating with Imaging Physical Model</u>, funded by Natural Science Foundation of Shandong Province, project number: ZR2017PF003.
+		<li><strong>(Primary Participant)</strong><u>Quantitative analysis of changes in intracellular protein patterns driven by large-scale machine learning</u>, funded by National Natural Science Foundation of China, project number: 61802216.
+		<li><strong>(Primary Participant)</strong><u>Multi-source remote sensing information collection ground observation big data shandong province drought star - earth integration detection model research</u>, funded by Major Special Project of Natural Science Fund of Shandong Province, project number: ZR2107ZB0422.
+		<li><strong>(Second Investigator)</strong><u>Research on screen video quality evaluation algorithm based on visual perception</u>, funded by Qingdao postdoctoral Applied Research Project, project number: 2016025.
+		<li><strong>(Primary Participant)</strong><u>Classification and application of candies based on artificial intelligence</u>, funded by Enterprises and Institutions Entrust Science and Technology Projects, project number: 2018001.
+    </ul>
+</div>
+
+<div class="content publications">
+	<a name="Selected"></a>
+	<div class="title">Selected Papers</div>
+	<ol>
+		<li>
+			<div class="imgblock"><img src="resources/paper1.jpg"></img></div>
+			<span class="title">Benchmarking Underwater Image Enhancement and Restoration, and Beyond</span><br>
+			<em>IEEE Access, 01 July 2020</em>
+			<div class="info text-success italic"><b>Guojia Hou*</b>, Xin Zhao, Zhenkuan Pan, Huan Yang, Lu Tan, Jingming Li.</div>
+			<div class="stuff">
+				<a class="" href="https://ieeexplore.ieee.org/document/9130676" target="_blank">[Paper]</a>
+				<a class="" href="https://ieee-dataport.org/open-access/suid-synthetic-underwater-image-dataset" target="_blank">[Dataset]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+		<li>
+			<!--<div class="imgblock"><img src="camera_ready/peekfuture.png"></img></div>-->
+			<div class="imgblock"><img src="resources/paper2.jpg"></img></div>
+			<span class="title">A Novel Dark Channel Prior Guided Variational Framework for Underwater Image Restoration
+			</span><br>
+			<em>Journal of Visual Communication and Image Representation, 2020, 66:102732</em>
+			<div class="info text-success italic"><strong>Guojia Hou*</strong>, Jingming Li, Guodong Wang, Huan Yang, Baoxiang Huang, Zhenkuan Pan*.</div>
+			<div class="stuff">
+				<a class="" href="https://doi.org/10.1016/j.jvcir.2019.102732" target="_blank">[Paper]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+		<li>
+			<div class="imgblock"  style="height:170px;" ><img src="resources/paper3.jpg"></img></div>
+			<span class="title">Underwater image dehazing and denoising via curvature variation regularization
+			</span><br>
+			<em>Multimedia Tools and Applications, 2020</em>
+			<div class="info text-success italic"><b>Guojia Hou*</b>, Jingming Li, Guodong Wang, Zhenkuan Pan, Xin Zhao.</div>
+			
+			<div class="stuff">
+				<a class="" href="https://doi.org/10.1007/s11042-020-08759-z" target="_blank">[Paper]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+		<li>
+			<div class="imgblock"><img src="resources/paper4.jpg"></img></div>
+			<span class="title">A Hybrid Framework for Underwater Image Enhancement
+			</span><br>
+			<em>IEEE Access, 28 October 2020</em>
+			<div class="info text-success italic">Xinjie Li, <b>Guojia Hou*</b>, Lu Tan, Wanquan Liu.</div>
+			<div class="stuff">
+				<a class="" href="https://ieeexplore.ieee.org/document/9242235" target="_blank">[Paper]</a>
+				<a class="" href="https://github.com/Hou-Guojia/A-Hybrid-Framework-for-Underwater-Image-Enhancement" target="_blank">[Code]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+		<li>
+			<div class="imgblock"><img src="resources/paper5.jpg"></img></div>
+			<span class="title">An efficient nonlocal variational method with application to underwater image restoration
+			</span><br>
+			<em>Neurocomputing, 2019, 369:106-121</em>
+			<div class="info text-success italic"><strong>Guojia Hou*</strong>, Zhenkuan Pan, et al.</div>
+			<div class="stuff">
+				<a class="" href="https://www.sciencedirect.com/science/article/pii/S0925231219311798?via%3Dihub" target="_blank">[Paper]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+
+		<li>
+			<div class="imgblock"><img src="resources/paper6.jpg"></img></div>
+			<span class="title">Hue Preserving Based Approach for Underwater Color Image Enhancement
+			</span><br>
+			<em>IET Image Processing, 12(2), 2018, pp. 292-298</em>
+			<div class="info text-success italic"><strong>Guojia Hou*</strong>, Zhenkuan Pan, Baoxiang Huang, et al.</div>
+			<div class="stuff">
+				<a class="" href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-ipr.2017.0359" target="_blank">[Paper]</a>
+				<a class="" href="https://github.com/Hou-Guojia/Hue-Perserving-Based-Approach-For-Underwater-Color-Image-Enhancement" target="_blank">[Code]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+
+		<li>
+			<div class="imgblock"><img src="resources/paper7.jpg"></img></div>
+			<span class="title">Efficient L1-based nonlocal total variational model of Retinex for image restoration
+			</span><br>
+			<em> Journal of Electronic Imaging, 27(5), 2018</em>
+			<div class="info text-success italic"><strong>Guojia Hou</strong>, Huizhu Pan, Baoxiang Huang, et al.</div>
+			<div class="stuff">
+				<a class="" href="https://doi.org/10.1117/1.JEI.27.5.051207" target="_blank">[Paper]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+
+		<li>
+			<div class="imgblock"><img src="resources/paper8.jpg"></img></div>
+			<span class="title">Single Image Dehazing and Denoising Combining Dark Channel Prior and Variational Models
+			</span><br>
+			<em> IET Computer Vision, 12(4), 2018, pp. 393-402</em>
+			<div class="info text-success italic">Zhi Wang, <strong>Guojia Hou*</strong>,  Zhenkuan Pan, Guodong Wang.</div>
+			<div class="stuff">
+				<a class="" href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-cvi.2017.0318" target="_blank">[Paper]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+		<li>
+			<div class="imgblock"><img src="resources/paper9.jpg"></img></div>
+			<span class="title">Image Enhancement and Restoration State of the Art of Variational Retinex Models
+			</span><br>
+			<em>IAENG International Journal of Computer Science, 44(4), 2017, pp. 445-455</em>
+			<div class="info text-success italic"><b>Guojia Hou*</b>, Zhenkuan Pan, Baoxiang Huang, et al.</div>
+			<div class="stuff">
+			</div>
+			<div style="clear:both"></div>
+		</li>
+
+		<li>
+			<div class="imgblock"><img src="resources/paper10.jpg"></img></div>
+			<span class="title">Max-Flow Method based on Chan-Vese Model, Advances in Image and Graphics Technologies (IGTA)
+			</span><br>
+			<em>Advances in Image and Graphics Technologies (IGTA), 2017, pp. 232-242</em>
+			<div class="info text-success italic"><b>Guojia Hou*</b>, Huizhu Pan, Ruixue Zhao, et al.</div>
+			<div class="stuff">
+				<a class="" href="https://doi.org/10.1007/978-981-10-7389-2_23" target="_blank">[Paper]</a>
+			</div>
+			<div style="clear:both"></div>
+		</li>
+	</ol>
+</div>
+
+<div class="content honors" name='honors'>
+	<a name="Papers"></a>
+	<div class="title">Publications</div>
+        <h1>
+<a id="publications-J-pages" class="anchor" href="#publications-J-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>2020:</h1>
+
+<ul>
+<li> <strong>Guojia Hou*, </strong>Jingming Li, Guodong Wang, Huan Yang, Baoxiang Huang, Zhenkuan Pan*, A Novel Dark Channel Prior Guided Variational Framework for Underwater Image Restoration,  <strong><ud2> Journal of Visual Communication and Image Representation,  </ud2></strong> 2020, 66:102732.<a href="https://doi.org/10.1016/j.jvcir.2019.102732" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+<li> <strong>Guojia Hou*, </strong>Jingming Li, Guodong Wang, Zhenkuan Pan, Xin Zhao, Underwater image dehazing and denoising via curvature variation regularization, <strong><ud2>Multimedia Tools and Applications,  </ud2></strong> 2020, 79: 20199–20219.<a href="https://doi.org/10.1007/s11042-020-08759-z" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+<li> <strong>Guojia Hou*, </strong>Xin Zhao, Zhenkuan Pan*, Huan Yang, Lu Tan and Jingming Li, Benchmarking Underwater Image Enhancement and Restoration, and Beyond, <strong><ud2>IEEE Access,  </ud2></strong>  2020, 8, 122078-122091. <a href="https://ieeexplore.ieee.org/document/9130676" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+<li>Xinjie Li, <strong>Guojia Hou*,</strong> Lu Tan, Wanquan Liu, A Hybrid Framework for Underwater Image Enhancement, <strong><ud2>IEEE Access,  </ud2></strong>  2020, 10, 197448-197462. <a href="https://ieeexplore.ieee.org/document/9242235" target="_blank"><font color="#1C86EE">[PDF]</font></a> <a href="https://github.com/Hou-Guojia/A-Hybrid-Framework-for-Underwater-Image-Enhancement" target="_blank"><font color="#1C86EE">[Code]</font></a> </li>
+<li>Jingming Li, <strong>Guojia Hou*</strong>, Zhenkuan Pan, Yuhai Liu, Xin Zhao, Guodong Wang, Underwater Image Restoration Based on a Laplace Operator Prior Term,  <strong><ud2>Laser & Optoelectronics Progress, </ud2></strong> 2020, 57(16): 161026. <a href="https://dx.doi.org/10.3788/LOP57.161026" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+<li>Xin Zhao, <strong>Guojia Hou*,</strong>  Zhenkuan Pan, Jingming Li, Guodong Wang, Underwater Image Quality Assessment Method Based on Human Vision System,  <strong><ud2>Computer Engineering, </ud2></strong> 2020, 46(7):235-242. <a href="http://www.ecice06.com/CN/10.19678/j.issn.1000-3428.0055324" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+
+
+</ul>    
+  
+<h1>
+<a id="publications-J-pages" class="anchor" href="#publications-J-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>2019:</h1>
+
+<ul>
+<li> <strong>Guojia Hou*, </strong>Zhenkuan Pan, Guodong Wang, Huan Yang, Jinming Duan, An efficient nonlocal variational method with application to underwater image restoration,  <strong><ud2>Neurocomputing, </ud2></strong> 2019, 369:106-121.<a href="https://doi.org/10.1016/j.neucom.2019.08.041" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+
+
+</ul>  
+  
+<h1>
+<a id="publications-J-pages" class="anchor" href="#publications-J-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>2018:</h1>
+
+<ul>
+<li> <strong>Guojia Hou*, </strong>Zhenkuan Pan, Baoxiang Huang, et al., Hue Preserving Based Approach for Underwater Color Image Enhancement, <strong><ud2>IET Image Processing, </ud2></strong> 2018, 12(2):292-298.<a href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-ipr.2017.0359" target="_blank"><font color="#1C86EE">[PDF]</font></a> <a href="https://github.com/Hou-Guojia/Hue-Perserving-Based-Approach-For-Underwater-Color-Image-Enhancement" target="_blank"><font color="#1C86EE">[Code]</font></a></li>
+<li> <strong>Guojia Hou, </strong>Huizhu Pan, Baoxiang Huang, et al., Efficient L1-based nonlocal total variational model of Retinex for image restoration, <strong><ud2>Journal of Electronic Imaging, </ud2></strong> 2018, 27(5): 051207.<a href="https://doi.org/10.1117/1.JEI.27.5.051207" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+<li>Zhi Wang, <strong>Guojia Hou*, </strong>Zhenkuan Pan, Guodong Wang, Single Image Dehazing and Denoising Combining Dark Channel Prior and Variational Models,  <strong><ud2>IET Computer Vision,</ud2></strong>  2018, 12(4):393-402.<a href="https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-cvi.2017.0318" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+</ul>  
+  
+<h1>
+<a id="publications-J-pages" class="anchor" href="#publications-J-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>2017:</h1>
+
+<ul>
+<li> <strong>Guojia Hou*, </strong>Zhenkuan Pan, Baoxiang Huang, et al., Image Enhancement and Restoration State of the Art of Variational Retinex Models, <strong><ud2>IAENG International Journal of Computer Science,</ud2></strong>  2017, 44(4):445-455. <a href="http://www.iaeng.org/IJCS/issues_v44/issue_4/IJCS_44_4_05.pdf" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+<li> <strong>Guojia Hou, </strong>Huizhu Pan, Ruixue Zhao, et al., Image Segmentation via the Continuous Max-Flow Method based on Chan-Vese Model, <strong><ud2>Advances in Image and Graphics Technologies (IGTA), </ud2></strong>  2017, pp. 232-242.<a href="https://doi.org/10.1007/978-981-10-7389-2_23" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+
+</ul>
+  
+<h1>
+<a id="publications-J-pages" class="anchor" href="#publications-J-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>2016:</h1>
+
+<ul>
+<li> <strong>Guojia Hou*, </strong>Xin Luan, Dalei Song, Xueyan Ma, Underwater Man-Made Object Recognition on the Basis of Color and Shape Features, <strong><ud2>Journal of Coastal Research,</ud2></strong>    2016, 32(5):1135-1141.<a href="https://doi.org/10.2112/JCOASTRES-D-14-00249.1" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+</ul>
+  
+<h1>
+<a id="publications-J-pages" class="anchor" href="#publications-J-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>2013-2015:</h1>
+
+<ul>
+<li> <strong>Guojia Hou*, </strong> Xin Luan, Dalei Song, A Study on Color Model Selection for Underwater Color Image Preprocessing, <strong><ud2>IEEE CYBER,</ud2></strong> 2015, pp.1456-1461, <a href="https://doi.org/10.1109/CYBER.2015.7288159" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+<li> Xin Luan, <strong>Guojia Hou </strong>,  Zhengyuan Sun, et al., Underwater Color Image Enhancement Using Combining Schemes,<strong><ud2>Marine Technology Society Journal, </ud2></strong>   2014, 48(3):57-62. <a href="https://doi.org/10.4031/MTSJ.48.3.8" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+<li> Haipeng Qu,<strong>Guojia Hou </strong> , Ying Guo, Ning Wang, Zhongwen Guo, Localization with Single Stationary Anchor for Mobile Node in Wireless Sensor Networks,<strong><ud2> IJDSN 9, </ud2></strong> 2013.<a href="https://doi.org/10.1155/2013/212806" target="_blank"><font color="#1C86EE">[PDF]</font></a></li>
+</ul>
+</div>
+
+
+
+<div class="content honors" name='honors'>
+	<a name="Patent"></a>
+	<div class="title">Patents</div>
+        <ul>
+            <li><strong>“A variational framework for underwater image restoration”</strong>  <a href="http://www.vipzhuanli.com/patent/201810272897.1/">ZL 201810272897.1</a></li>
+            <li><strong>“A new algorithm to synthesize underwater optical image”</strong>  <a href="http://www.xjishu.com/zhuanli/down/18303884.html">201910142744.X</a></li>
+            <li><strong>“A blind variational method for underwater images based on curvature term”</strong><a href="http://www.vipzhuanli.com/patent/201910215474.0/">CN201910215474.0</a></li>
+        </ul>
+</div>
+
+<div class="content research">
+	<a name="Award"></a>
+	<div class="title">Honors & Awards</div>
+	    <ul>
+            <li>China Scholarship Council (No. 201908370002)</li>
+            <li>Shandong Government Award for Outstanding Self-funded Students, 2015</li>
+            <li>Outstanding graduate of ocean university of China, 2015</li>
+            <li>President's scholarship, 2014 (five people in the college)</li>
+            <li>Award for excellent graduate student, ocean university of China, 2013</li>
+        </ul>
+</div>
+<div class="content pro">
+	<a name="Reviewer"></a>
+	<div class="title">Reviewer</div>
+	</h2>
+        <ul>
+            <li><strong>Elsevier</strong></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neurocomputing
+
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Journal of Visual Communication and Image Representation
+
+            <br>
+            <li><strong>IEEE</strong></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transaction on Multimedia, ACCESS
+            <li><strong>Springer</strong></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Journal of Computer Science and Technology
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedia Tools and Application
+            <li><strong>IET</strong></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image Processing, Computer Vision, Electronics Letters
+            <br>
+        </ul>
+        <br>
+</div>
+<div class="footer footer1">
+	<div class="content white-text">
+		College of Computer Science and Technology <br/>
+		Qingdao University
+	</div>
+<div class="footer footer2">
+	<div class="content white-text">
+		All Rights Reserved, 2021
+	</div>
+</div>
+</body>
+</html>
