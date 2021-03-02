@@ -146,17 +146,20 @@
 <!-- quick link and intro -->
 <style type="text/css">
 div.quickLink{
-	min-height:70px;
+	min-height:50px; 
+	/* 控制5个超链接居中 */
+	padding-left: 180px; 
 }
 div.quickLink > .block{
 	display:block;
 	float:left;
-	padding:10px 0px;
+	padding:5px 0px;
 	text-align:center;
 	border:1px silver solid;
 	border-radius:5px;
 	box-shadow:2px 2px 1px silver;
-	width:140px;
+	/* 每个超链接块高度 */
+	width:120px;
 	margin-right:50px;
 	margin-top:20px;
 	cursor:pointer;
@@ -254,8 +257,8 @@ img.press{
 	<a class="block" href="#Projects">Projects</a>
 	<a class="block" href="#Selected">Selected Papers</a>
 	<a class="block" href="#Papers">Publications</a>
-	<a class="block" href="#Award">Awards</a>
 	<a class="block" href="#Patent">Patents</a>
+	<a class="block" href="#Award">Awards</a>
 </div>
 
 <div class="content intro">
